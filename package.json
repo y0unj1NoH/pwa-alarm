@@ -8,7 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "pwa": "pwa-assets-generator --preset minimal public/logo.svg"
+    "gen-pwa": "pwa-assets-generator --preset minimal public/logo.svg"
+  },
+  "resolutions": {
+    "sharp": "^0.33.5"
   },
   "dependencies": {
     "react": "^18.3.1",
