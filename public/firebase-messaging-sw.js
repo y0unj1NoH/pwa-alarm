@@ -50,7 +50,7 @@ if (typeof importScripts === "function") {
     if (notificationTitle) {
       const notificationOptions = {
         body: payload.body,
-        // icon: payload.icon
+        icon: "/favicon-32x32.png",
       };
       self.registration.showNotification(
         notificationTitle,
