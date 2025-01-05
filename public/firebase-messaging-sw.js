@@ -47,11 +47,16 @@ if (typeof importScripts === "function") {
 
   messaging.onBackgroundMessage(payload => {
     const notificationTitle = payload.title;
-    const notificationOptions = {
-      body: payload.body,
-      // icon: payload.icon
-    };
-    self.registration.showNotification(notificationTitle, notificationOptions);
+    if (notificationTitle) {
+      const notificationOptions = {
+        body: payload.body,
+        // icon: payload.icon
+      };
+      self.registration.showNotification(
+        notificationTitle,
+        notificationOptions
+      );
+    }
   });
 
   // Web Push 알림 클릭 핸들러
